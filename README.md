@@ -1,4 +1,4 @@
-# Javascript Intermediate Challenges
+# Javascript Foundations Challenges
 
 This repository holds the vanilla JavaScript pair programming challenges for the Delta 2021 cohort.
 
