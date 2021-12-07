@@ -31,16 +31,16 @@ console.log(odd(testArr2));
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
 var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
 // // --> "nicework"
-const typeFunc = (array) =>{
-  //  let newArr = []
-    for (var i = 0; i < comboArr.length; i++){
-        if (comboArr[i].typeof === "string"){
-          console.log(`${comboArr[i]}`);
-        }
+const typeFun = (array) => {
+  let newArr = []
+  for (var i = 0; i < array.length; i++){
+    if (typeof array[i] === "string"){
+      newArr.push(array[i])
     }
-    return "all done"
+  }
+  return newArr.join("")
 }
-console.log(typeFunc(comboArr));
+console.log(typeFun(comboArr));
 // Create a function that takes in an array of numbers and returns the sum.
 // var addThese1 = [1, 2, 3, 4]
 // // --> 10
