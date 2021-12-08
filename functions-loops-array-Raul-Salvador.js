@@ -58,15 +58,53 @@ console.log(stringArray(comboArr));
 
 
 // // --> "nicework"
-// Create a function that takes in an array of numbers and returns the sum.
-// var addThese1 = [1, 2, 3, 4]
-// // --> 10
 
-// var addThese2 = []
+
+
+// Create a function that takes in an array of numbers and returns the sum.
+var addThese1 = [1, 2, 3, 4]
+// // --> 10
+var addThese2 = []
 // // --> 0
+const sumNum = (array) => {
+
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        sum = array[i] + sum
+
+    }
+
+    return sum
+}
+
+console.log(sumNum(addThese1));
+console.log(sumNum(addThese2));
+
+
+
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// var indexHighestNumber = [1, 4, 2, 3]
+var indexHighestNumber = [1, 4, 2, 3]
 // // --> 1
+const largeNum = (array) => {
+
+    let largeNum = array[0]
+    for (let i = 1; i < array.length; i++) {
+        if (largeNum < array[i]) {
+            largeNum = array[i]
+        }
+
+    }
+
+    return array.indexOf(largeNum)
+}
+
+console.log(largeNum(indexHighestNumber));
+
+
+
+
+
 // STRETCH Challenges
 
 // Create a function that takes in two arrays and returns one array with no duplicate values.
