@@ -15,4 +15,5 @@ const sorter = (arr) => {
 return arr.sort((a,b) => a - b);
 }
 // GREEN!
+// Deleted line console.log(arr)
 // REFACTOR!!
