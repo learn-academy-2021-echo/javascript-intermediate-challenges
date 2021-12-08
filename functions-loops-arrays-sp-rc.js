@@ -21,6 +21,7 @@
 
 // // --> [9, 27, 45, 12, 30]
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
+
 var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 const oddNumFunct = (array) => {
     let oddNum = []
@@ -36,17 +37,60 @@ const oddNumFunct = (array) => {
 console.log(oddNumFunct(testArr2));
 
 // // // --> [-7, 3, 5, 13]
+
 // // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
 // var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
+
+// const returnLetters = () => {
+//     let letArray = []
+//     for (let i = 0; i < comboArr.length; i++) {
+//         if (typeof(comboArr[i]) === "string"){
+//             letArray.push(comboArr[i])
+//         }
+//     }
+//     return letArray
+// }
+// console.log(returnLetters(comboArr).join(""))
+
+
 // // // --> "nicework"
 // // Create a function that takes in an array of numbers and returns the sum.
 // var addThese1 = [1, 2, 3, 4]
+
+// const addArr = (array) => {
+//     let newNum = 0
+//     for (let i = 0; i < array.length; i++) {
+//         newNum = array[i] + newNum
+//     }
+//     return newNum
+// }
+
+// console.log(addArr(addThese1));
+
 // // // --> 10
 
 // var addThese2 = []
 // // // --> 0
 // // Create a function that takes in an array of numbers and returns the index of the largest number.
 // var indexHighestNumber = [1, 4,console.log(onlyEven(myArr2))
+
+// const largeNumIndex = (array) => {
+//     let indx = 0
+//     let bigNum = 0
+//     //cycle through array indexHighestNumber
+//     //initiate a comparative value of 0 (bigNum = 0)
+//     for (let i = 0; i < array.length; i++) {
+//     //cycle through array and compare if value at array[i] is greater than number stored in bigNum, set bigNum = array[i] and move on, also store its index at variable indx
+//     //if array[i] > array[i + 1] then store i in a new value
+//         if (array[i] > bigNum){
+//             bigNum = array[i]
+//             indx = i
+//         } 
+//     }
+//     return indx
+// }
+// console.log(largeNumIndex(indexHighestNumber))
+
 // // Challenges
 // // Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 // // Don't forget to pseudo code.
