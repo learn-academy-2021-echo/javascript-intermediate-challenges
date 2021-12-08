@@ -48,3 +48,40 @@ const letters = (array) => {
   return lett.join("")
 }
 console.log(letters(comboArr));
+
+
+
+//Create a function that takes in an array of numbers and returns the sum.
+var addThese1 = [1, 2, 3, 4]
+// --> 10
+
+var addThese2 = []
+// --> 0
+//creat a function and for loop inside function to iterate over array
+const addMach = (array) => {
+let sum = 0 ;
+for (var i = 0; i < array.length; i++) {
+  sum += array[i]
+}
+
+  return sum
+}
+console.log(addMach(addThese2));
+
+
+//Create a function that takes in an array of numbers and returns the index of the largest number.
+
+
+var indexHighestNumber = [1, 4, 2, 3]
+// --> 1 need a function that returns the largest number in the array
+// create a function
+const bigNum = (array) => {
+  let num = 0
+for (var i = 0; i < array.length; i++) {
+  if (array[i] >= num){
+    num = array[i]
+  }
+}
+return num;
+}
+console.log(bigNum(indexHighestNumber));
