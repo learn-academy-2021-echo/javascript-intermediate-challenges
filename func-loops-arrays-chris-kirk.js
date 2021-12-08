@@ -1,56 +1,90 @@
-// Challenges
-// Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
-// Don't forget to pseudo code.
+// // Challenges
+// // Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
+// // Don't forget to pseudo code.
 
-// Write a function that takes in an array of numbers and returns an array with all numbers multiplied by 3.
-var testArr1 = [3, 9, 15, 4, 10]
-// // --> [9, 27, 45, 12, 30]
+// // Write a function that takes in an array of numbers and returns an array with all numbers multiplied by 3.
+// var testArr1 = [3, 9, 15, 4, 10]
+// // // --> [9, 27, 45, 12, 30]
 
-// declare a function that takes an array as the param
-const multiThree = (array) => {
-    // create new empty array
-    let result = []
-    // use forEach to iterate through the array and multiply each num by 3
-    array.forEach(num => result.push(num * 3));
-    // return the new array
-    return result
-}
+// // declare a function that takes an array as the param
+// const multiThree = (array) => {
+//     // create new empty array
+//     let result = []
+//     // use forEach to iterate through the array and multiply each num by 3
+//     array.forEach(num => result.push(num * 3));
+//     // return the new array
+//     return result
+// }
 
-console.log(multiThree(testArr1));
+// console.log(multiThree(testArr1));
 
 
-// Write a function that takes in an array of numbers and returns a new array with only odd numbers.
-var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
-// // --> [-7, 3, 5, 13]
+// // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
+// var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+// // // --> [-7, 3, 5, 13]
 
-// declare a function that takes an array as the param
-const onlyOdd = (array) => {
-    // create new empty array
-    let result = []
-    // use forEach to iterate
-    // array.forEach(num => result.push(num % 2 === 1 ? num % 2 === -1: ""))
-    array.forEach(num => (num % 2 === 1 || num % 2 === -1) ? result.push(num) : null)
-    // use modulo to determine if odd
-    // if odd, push into 
-    // if not odd, don't do anything
-    // return the new array
-    return result
-}
+// // declare a function that takes an array as the param
+// const onlyOdd = (array) => {
+//     // create new empty array
+//     let result = []
+//     // use forEach to iterate
+//     // array.forEach(num => result.push(num % 2 === 1 ? num % 2 === -1: ""))
+//     array.forEach(num => (num % 2 === 1 || num % 2 === -1) ? result.push(num) : null)
+//     // use modulo to determine if odd
+//     // if odd, push into 
+//     // if not odd, don't do anything
+//     // return the new array
+//     return result
+// }
 
-console.log(onlyOdd(testArr2));
+// // console.log(onlyOdd(testArr2));
 
-// Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
+// // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
 // var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
-// // --> "nicework"
-// Create a function that takes in an array of numbers and returns the sum.
-// var addThese1 = [1, 2, 3, 4]
-// // --> 10
+// // // --> "nicework"
 
-// var addThese2 = []
+// create a function
+// // Declare that takes an array as a parameter
+// const onlyStrings = (array) => {
+//     // Create an empty array
+//     let result = []
+//     // Use .forEach to iterate through the array
+//     // Use typeof method to determine if it's a string
+//     // if result is a string, we'll push to the empty array
+//     array.forEach( data => (typeof data === "string" ? result.push(data) : null ))
+//     // return the joined array
+//     return result.join("")
+// }
+// console.log(onlyStrings(comboArr));
+
+// Create a function that takes in an array of numbers and returns the sum.
+var addThese1 = [1, 2, 3, 4]
+// // --> 10
+// Use reduce method on array, accessing first and second parameter with variables and adding them together. 
+
+
+var addThese2 = []
+// Create a function that takes in an array
+//
+const sumOf = (array) =>{
+// Check if array is empty. If so return 0. Else, we .reduce() the array to return the sum
+   return array.length === 0 ? 0 : (array.reduce((previousValue, currentValue) => previousValue + currentValue))
+}
+// console.log(sumOf(addThese2));
+// console.log(sumOf(addThese1));
 // // --> 0
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// var indexHighestNumber = [1, 4, 2, 3]
+var indexHighestNumber = [1, 4, 2, 3]
 // // --> 1
+
+// Function was created that takes in any array
+const highNumber = (array) => {
+    return array.reduce((previousValue, currentValue, i, arr) => currentValue > arr[previousValue] ? i : previousValue, 0);
+}
+console.log(highNumber(indexHighestNumber));
+
+
+
 // STRETCH Challenges
 
 // Create a function that takes in two arrays and returns one array with no duplicate values.
