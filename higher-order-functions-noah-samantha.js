@@ -22,14 +22,48 @@ console.log(newArray(arr2));
 //Write a function that takes in an array of numbers and letters and returns a string with only the letters. //HINT: Use typeof method
 var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 // --> "nicework"
+
+// We are going to declare a function onlyLetters and then is going to use .filter use the join() to make a string
+
+const getString = (array) => {
+    let onlyString = array.filter(value =>{ 
+        return typeof value === "string"
+    }) 
+    return onlyString.join("") 
+}
+console.log(getString (comboArr))
+
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 // // --> [58, "abcd", true]
 // STRETCH Challenges
+// make a declaration
+// const positive = (array) => {
+// let newArray1 = (array.filter(value => {
+//     return typeof value !== 0 && value !== false && value !== null && value !== " "
+// }))
+// }
+// console.log(positive(filterArrayValues))
+// const positive = filterArrayValues .filter( value => { 
+//     return value % 2 !== 0 || value > 0
+// })
+
+// console.log(positive)
 
 // Create a function that takes in a string and returns a new string with all the vowels removed.
 var str = "javascript is awesome"
 // // --> "jvscrpt s wsm"
+
+
+const noVowels = (vowels)=> {
+let array3 = (vowels.filter (value=> {
+    return value !== "a" && value !== "e" && value !=="i" && value !=="o" && value !== "u"
+
+}))
+
+}
+console.log(noVowels(str))
+
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 var arr1 = [3, 7, 10, 5, 4, 3]
 
