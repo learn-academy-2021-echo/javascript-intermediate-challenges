@@ -23,7 +23,9 @@ const multiplyByThree = () => {
   for(let i=0; i<array.length; i++){
     newArr.push(array[i] * 3)
 
+
   return
+
 }
 
 console.log();
