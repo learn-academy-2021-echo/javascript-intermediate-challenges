@@ -21,7 +21,7 @@ const newArray = (array) => {
     return array.filter(value => value % 2 !== 0)
 
 }
-console.log(newArray(arr2))Challenges
+console.log(newArray(arr2))
 
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use typeof method
