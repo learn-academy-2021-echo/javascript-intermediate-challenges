@@ -236,3 +236,45 @@ const divisibleBy = (num1, num2) => {
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
 // Write the function that will make the test pass.
 
+
+describe("fizzbuzz", () => {
+  it("takes in a number and determines if it is divisble by 3,5,or both",()=>{
+    expect(fizzbuzz(15)).toEqual("fizzbuzz")
+    expect(fizzbuzz(9)).toEqual("fizz")
+    expect(fizzbuzz(10)).toEqual("buzz")
+    expect(fizzbuzz(43)).toEqual("Number is not divisible by 3 or 5")
+    expect(fizzbuzz(42)).toBe("fizz")
+    expect(fizzbuzz(42)).not.toBe("fizzbuzz")
+    expect(fizzbuzz(99)).toBe("fizz")
+    expect(fizzbuzz(134)).toBe("fizz")
+  })
+
+})
+
+const fizzbuzz = (number) => {
+if(number % 3 === 0 && number % 5 === 0){
+  return "fizzbuzz"
+} else if(number % 3 === 0){
+  return "fizz"
+}else if(number % 5 === 0){
+  return "buzz"
+} else{
+return "Number is not divisible by 3 or 5"
+}
+
+
+}
+
+
+
+
+
+//extra practive
+//
+// test('adding positive numbers is not zero', () => {
+//   for (let a = 1; a < 10; a++) {
+//     for (let b = 1; b < 10; b++) {
+//       expect(a + b).not.toBe(0);
+//     }
+//   }
+// });
