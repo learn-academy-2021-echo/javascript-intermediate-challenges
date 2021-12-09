@@ -38,13 +38,70 @@ const areYouStressed = (string) => {
   }
 }
 areYouStressed()
-// Write the function that will make the test pass.
+
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+describe("inBudget", () => {
+  it("checks to see if user is in budget", () => {
+    expect(inBudget(301)).toEqual("out of budget")
+    expect(inBudget(200)).toEqual("in budget")
+  })
+})
+
 // Write the function that will make the test pass.
+
+const inBudget = (num) => {
+  if (num > 300){
+    return "out of budget"
+  } else {
+    return "in budget"
+  }
+}
+
+inBudget()
+
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+describe("smaller", () => {
+  it("function that returns smaller number", () => {
+    expect(smaller(5, 2)).toEqual(5)
+    expect(smaller(1, 6)).toEqual(6)
+  })
+})
+
+
+
 // Write the function that will make the test pass.
+
+const smaller = (num1, num2) =>{
+  if (num1 > num2){
+    return num1
+  } else if (num2 > num1){
+    return num2
+  }
+}
+
+smaller()
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
+describe("odd", () => {
+  it("determine if number is odd", () => {
+    expect(odd(3)).toEqual("odd")
+    expect(odd(6)).toEqual("even")
+    expect(odd("six")).toEqual("not a number")
+  })
+})
+
 // Write the function that will make the test pass.
+
+const odd = (num) => {
+  if(num % 2 === 1 || num % 2 === -1){
+    return "odd"
+  }else if (num % 2 === 0){
+    return "even"
+  } else {
+    return "not a number"
+  }
+}
+
+odd()
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Write the function that will make the test pass.
 // Write the test for a function called rick that returns "Morty".
