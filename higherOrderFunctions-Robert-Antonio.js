@@ -37,31 +37,18 @@
 
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 
-var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
+// var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 
- const newArr = (array) => {
-     let sortedArr = array.filter(value =>{
-         return typeof value !== "number" && typeof value !== "false" && typeof value !== "null" 
-     })
-     return sortedArr
- }
+//  const newArr = (array) => {
+//      let sortedArr = array.filter(value =>{
+//          return value!== " " && value !== 0 &&  value !== false && value !== null 
+//      })
+//      return sortedArr
+//  }
 
-console.log(newArr(filterArrayValues));
+// console.log(newArr(filterArrayValues));
     
-//return array.filter(value => {
-//         if (typeof value === "number"){
-//             return value
-//         }else if (typeof value !== "false"){
-//             return value
-//         }else if (value === " "){
-//             return
-//         }
-//     })
-// }
 
-
-
-console.log(newArr(filterArrayValues))
 
 // // --> [58, "abcd", true]
 // STRETCH Challenges
@@ -75,27 +62,29 @@ var str = "javascript is awesome"
 //if str[i] = "a", "e", "i", "o", "u" do not return 
 // return only constanants 
 
-// const remVowel = (str) => {
-//     let newStr = str.split()
-//     newStr.filter(value => {
-//         if (value === "a"){
-//             return
-//         }
-//     }) 
-//     return newStr
-// }
-//     return str.split().filter(value => {
-//         if (value === "a"){
-//             return value
-//         }
+// const onlyConst = (string) => {
+//     let splitStr = string.split("").filter(value =>{
+//         return value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
 //     })
+//     return splitStr.join("")
 // }
-// console.log(str.split())
-
-//console.log(remVowel(str))
+// console.log(onlyConst(str))
 
 // // --> "jvscrpt s wsm"
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
-// var arr1 = [3, 7, 10, 5, 4, 3]
-// var arr2 = [7, 8, 2, 1, 5, 4]
+
+var arr1 = [3, 7, 10, 5, 4, 3]
+var arr2 = [7, 8, 2, 1, 5, 4]
+
+const noDups = (array1, array2) => {
+    const newerArr = array1.concat(array2)
+    let newArr.filter(value =>{
+        if (value === newArr){
+            return value
+        }
+    })
+    return newArr
+}
+
+console.log(noDups(arr1, arr2))
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
