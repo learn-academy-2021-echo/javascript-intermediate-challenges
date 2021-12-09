@@ -150,14 +150,117 @@ const pickleRick = (string) => {
 }
 
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+describe("greeter", () =>{
+  it("Takes in name and returns 'greetings, {name}", () => {
+    expect(greeter("Rick")).toEqual("greetings, Rick")
+    expect(greeter("Rob")).toEqual("greetings, Rob")
+    expect(greeter("Antonio")).toEqual("greetings, Antonio")
+  })
+})
 // Write the function that will make the test pass.
+
+const greeter = (name) => {
+  return `greetings, ${name}`
+}
+
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+describe("oddOrEven", () => {
+  it("checks to see if number is odd", () =>{
+    expect(oddOrEven(1)).toEqual("odd")
+    expect(oddOrEven(32)).toEqual("even")
+    expect(oddOrEven("string")).toEqual("not a number")
+  })
+})
+
 // Write the function that will make the test pass.
+
+const oddOrEven = (num) => {
+  if(num % 2 === 0){
+     return "even"
+  } else if(num % 2 === 1 || num % 2 === -1){
+    return "odd"
+  } else{
+    return "not a number"
+  }
+}
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+
+describe("doubler", () => {
+  it("checks to see if number is odd", () =>{
+    expect(doubler(1)).toEqual(2)
+    expect(doubler(32)).toEqual(64)
+    expect(doubler("string")).toEqual("not a number")
+  })
+})
 // Write the function that will make the test pass.
+const doubler = (num) => {
+  if(typeof num === "number"){
+    return num * 2
+  } else {
+    return "not a number"
+  }
+}
+
+
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+
+describe("multiply", () => {
+  it("checks to see if number is odd", () =>{
+    expect(multiply(1, 3)).toEqual(3)
+    expect(multiply(32, 5)).toEqual(160)
+    expect(multiply("string", 5)).toEqual(NaN)
+  })
+})
+
 // Write the function that will make the test pass.
+
+const multiply = (num1, num2) => {
+  if(typeof num1 && typeof num2 === "number"){
+    return num1 * num2
+  } else {
+    return "not a number"
+  }
+}
+
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+
+describe("divisibleBy", () => {
+  it("check if num1 is divisible by num2", () => {
+    expect(divisibleBy(3, 1)).toEqual("3 is evenly divisible by 1")
+    expect(divisibleBy(32, 8)).toEqual("32 is evenly divisible by 8")
+    expect(divisibleBy("string", 5)).toEqual("string is not evenly divisible by 5")
+    expect(divisibleBy(32, 3)).toEqual("32 is not evenly divisible by 3")
+  })
+})
+
 // Write the function that will make the test pass.
+
+const divisibleBy = (num1, num2) => {
+    if(num1 % num2 === 0){
+      return `${num1} is evenly divisible by ${num2}`
+    }else {
+      return `${num1} is not evenly divisible by ${num2}`
+    }
+  }
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'
+describe("fizzBuzz", () => {
+  it("if number is multiple of 3, replace with fizz, if multiple of 5 replace with buzz, if multiple of both replace with fizzbuzz", () => {
+    expect(fizzBuzz(3)).toEqual("fizz")
+    expect(fizzBuzz(5)).toEqual("buzz")
+    expect(fizzBuzz(15)).toEqual("fizzbuzz")
+    expect(fizzBuzz(13)).toEqual("no fizzbuzz for you")
+  })
+})
 // Write the function that will make the test pass.
+
+const fizzBuzz = (numb) => {
+  if (numb % 15 === 0){
+    return "fizzbuzz"
+  } else if (numb % 5 === 0){
+    return "buzz"
+  } else if (numb % 3 === 0){
+    return "fizz"
+  } else {
+    return "no fizzbuzz for you"
+  }
+}
