@@ -124,10 +124,40 @@ const fruitColor = (fruit) =>{
 
 // Write the function that will make the test pass.
 // Write the test for a function called rick that returns "Morty".
+describe ("Rick", () => {
+    it("returs Morty", () => {
+        expect(rick("Rick")).toEqual("Morty")
+        expect(rick(22)).toEqual("Morty")
+    })
+})
+
+const rick = (input) => {
+  return "Morty"
+}
 // Write the function that will make the test pass.
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+
+describe ("greeting", () => {
+    it("returns a greeting with name", () => {
+        expect(greeting("Kevin")).toEqual("Hello Kevin")
+        expect(greeting("Mikka")).toEqual("Hello Mikka")
+        expect(greeting("Rick")).toEqual("Hello Rick")
+    })
+})
+
+const greeting = (name) => {
+  return 'Hello ' + name
+}
 // Write the function that will make the test pass.
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+
+describe ("oddOrEven", () => {
+    it("returns the color of the input fruit", () => {
+        expect(OddOrEven("apple")).toEqual("red")
+        expect(oddOrEven("banana")).toEqual("yellow")
+
+    })
+})
 // Write the function that will make the test pass.
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Write the function that will make the test pass.
