@@ -98,7 +98,35 @@ const oddNumber = (number) => {
 
 
 
+
+describe("fruitsColors", () => {
+
+it( "return color of theinput fruit", () => {
+ expect(fruitsColors("banana")).toEqual("yellow")
+ expect(fruitsColors("apple")).toEqual("red")
+ expect(fruitsColors("grape")).toEqual("purple")
+
+})
+
+})
+
+
 // Write the function that will make the test pass.
+
+const fruitsColors = (string) => {
+  if (string === "banana"){
+    return "yellow" 
+  } else if (string === "apple"){
+      return "red"
+  } else if (string === "grape"){
+      return "purple"
+
+  }
+}
+
+
+
+
 // Write the test for a function called rick that returns "Morty".
 // Write the function that will make the test pass.
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
