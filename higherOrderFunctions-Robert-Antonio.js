@@ -62,29 +62,33 @@ var str = "javascript is awesome"
 //if str[i] = "a", "e", "i", "o", "u" do not return 
 // return only constanants 
 
-// const onlyConst = (string) => {
-//     let splitStr = string.split("").filter(value =>{
-//         return value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
-//     })
-//     return splitStr.join("")
-// }
-// console.log(onlyConst(str))
+const onlyConst = (string) => {
+    let splitStr = string.split("").filter(value =>{
+        return value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
+    })
+    return splitStr.join("")
+}
+console.log(onlyConst(str))
 
 // // --> "jvscrpt s wsm"
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
-// var arr1 = [3, 7, 10, 5, 4, 3]
-// var arr2 = [7, 8, 2, 1, 5, 4]
+var arr1 = [3, 7, 10, 5, 4, 3]
+var arr2 = [7, 8, 2, 1, 5, 4]
 
-// const noDups = (array1, array2) => {
-//     const newerArr = array1.concat(array2)
-//     let newArr.filter(value =>{
-//         if (value === newArr){
-//             return value
-//         }
-//     })
-//     return newArr
-// }
+const noDups = (array1, array2) => {
+    const finalArr = []
+    let newerArr = array1.concat(array2).map.filter(value =>{
+        let newArr = []
 
-// console.log(noDups(arr1, arr2))
+    
+    })
+    return newerArr
+}
+
+console.log(noDups(arr1, arr2))
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
+
+
+
+
