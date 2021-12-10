@@ -66,7 +66,7 @@ var arr2 = [7, 8, 2, 1, 5, 4]
 //    return combineArray.filter((value, index) => {
 //    combineArray.indexOf(value) !== index
 //
-//  })
+//   })
 
  const takeOutDupVal = (array1, array2) =>{
     let combineArray = array1.concat(array2)
