@@ -5,10 +5,16 @@ var person = {
   lastName: "Dent",
   homePlanet: "Earth",
   getData: function(){
+<<<<<<< HEAD
     return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}.`
     }
 }
   
+=======
+    return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}`
+    }
+}
+>>>>>>> 4fdcdc85e6c220bd31ee41546ab7024cf74f0123
 
 // Write the code that accesses the first name of the person object.
 // Write the code that accesses the last name of the person object.
