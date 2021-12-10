@@ -32,7 +32,7 @@ var person = {
     firstName: "Arthur",
     lastName: "Dent",
     homePlanet: "Earth"
-    grabData: function() {
+    grabData: function(){
         
         return `${this.firstName}'s is from planet ${this.homePlanet}`
      }
