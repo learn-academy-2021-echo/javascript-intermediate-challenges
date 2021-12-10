@@ -2,7 +2,11 @@
 // // Consider this variable:
 var person = {
     firstName: "Arthur",
+<<<<<<< HEAD
     lastName: "Dent",localStorage
+=======
+    lastName: "Dent",
+>>>>>>> 5c806c52bb191440d844cd51ec66153406a8bc7a
     namePlanet: function() {
       return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}`
     }
@@ -24,7 +28,11 @@ var person = {
     name: "chair", price: 14.99,
   }
   
+<<<<<<< HEAD
    
+=======
+  
+>>>>>>> 5c806c52bb191440d844cd51ec66153406a8bc7a
   
 //   // Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
   
