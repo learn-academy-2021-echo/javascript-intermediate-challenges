@@ -70,17 +70,25 @@ var animals = [
 // var {name, genre} = author
 // console.log(`${name} is a ${genre} author`);
 
-let pokeOne = {
-    species: "Charmandar",
-    pokemon_type: "Fire"
-}
-var {species, pokemon_type, describePokemon: function(){
-  return `${this.species} is ${this.pokemon_type}`
-}} = pokeOne
-
-
-
-// let pokeTwo = {
-//     species: "Magikarp",
-//     pokemon_type: "Water"
+// let pokeOne = {
+//     species: "Charmandar",
+//     pokemon_type: "Fire",
+//     describePokemon: function(){
+//       return `${pokeOne.species} is a ${pokeOne.pokemon_type} pokemon.`
+//     }
 // }
+//
+// var {species, pokemon_type, describePokemon} = pokeOne
+// console.log(describePokemon(pokeOne))
+
+
+
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water",
+    describePokemon: function(){
+      return `${pokeTwo.species} is a ${pokeTwo.pokemon_type} pokemon.`
+    }
+}
+var {species, pokemon_type, describePokemon} = pokeTwo
+console.log(describePokemon(pokeTwo))
