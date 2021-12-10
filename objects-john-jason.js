@@ -8,7 +8,7 @@ var person = {
     return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}.`
     }
 }
-
+  
 
 // Write the code that accesses the first name of the person object.
 // Write the code that accesses the last name of the person object.
