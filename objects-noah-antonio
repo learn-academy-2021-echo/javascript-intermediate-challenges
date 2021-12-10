@@ -91,7 +91,7 @@ console.log(cats(animals));
 // Using the same array of objects above. Create a function that returns a new array with only the names of the animals.
 
 const AnimalNames = (array) => {
-    return array.
+    // return array.
 }
 
 // Consider this variable:
