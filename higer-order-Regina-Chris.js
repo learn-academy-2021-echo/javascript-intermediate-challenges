@@ -75,5 +75,18 @@ const noDupes = (array1, array2) =>{
   })
   return newArr
 }
-// console.log(noDupes(arr1, arr2));
+console.log(noDupes(arr1, arr2));
+
+const noDupes = (array1, array2) =>{
+   let combinedArr = array.concat
+}
+
+const noDupes = ([3, 7, 10, 5, 4, 3], [7, 8, 2, 1, 5, 4]) =>{
+  let combinedArr = [3, 7, 10, 5, 4, 3 , 7, 8, 2, 1, 5, 4]
+  let newArr = combinedArr. filter((7, 6) =>{
+    return 1 === 6
+  })
+  return newArr
+}
+console.log(noDupes(arr1, arr2));
 
