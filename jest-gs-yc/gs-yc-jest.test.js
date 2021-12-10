@@ -40,7 +40,7 @@
 // Write the function that will make the test pass.
 //
 // describe("areYouInBudget", () => {
-//   it("input number then return a string", () => {
+//   it("input number then return a result of the budget", () => {
 //     expect(areYouInBudget(290)).toEqual("in budget")
 //   })
 // })
@@ -55,18 +55,18 @@
 
 //4
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
-// describe("smallerNum", (num1, num2) => {
+// describe("smallerNum", (number) => {
 //   it("takes two numbers and compare them and then returns the smaller number", () => {
-//     expect(smallerNum(num1 > num2)).toEqual(num1)
-//     expect(smallerNum(num2 > num1)).toEqual(num2)
+//     expect(smallerNum(5, 2)).toEqual(2)
+//
 //   })
 // })
 //
 // const smallerNum = (num1, num2) => {
 //   if(num1 > num2) {
-//     return num1
-//   } else {
 //     return num2
+//   } else {
+//     return num1
 //   }
 // }
 
@@ -74,33 +74,35 @@
 //Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 // describe("oddNum", (number) => {
 //   it("takes a number and return a tring", () => {
-//     expect(oddNum(number%2===0)).toEqual("odd")
+//     expect(oddNum(5)).toEqual("odd")
+//     expect(oddNum(6)).toEqual("even")
+
 //
 //   })
 // })
 // const oddNum = (number) => {
 //   if(number % 2 === 0) {
-//     return "odd"
-//   } else {
 //     return "even"
+//   } else {
+//     return "odd"
 //   }
 // }
 
 //6
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 
-// describe("fruitColors", (fruit) => {
+// describe("fruitColors", () => {
 //   it("takes a type of fruits and return the colors of them", () => {
 //     expect(fruitColors("banana")).toEqual("yellow")
 //   })
 // })
 //
-// const fruitColors = (fruit) => {
-//   if(fruit==="banana") {
+// const fruitColors = (type, color) => {
+//   if(type==="banana") {
 //     return "yellow"
-//   } else if(fruit === "apple"){
+//   } else if(type === "apple"){
 //     return "red"
-//   } else if(fruit === "grape") {
+//   } else if(type === "grape") {
 //     return "purple"
 //   } else {
 //     return "not a fruit"
@@ -124,16 +126,17 @@
 
 //8
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
-// describe("greeter", (name) => {
+// describe("greeter", () => {
 //   it("takes name and returns Hello! name", () => {
-//     expect(greeter(name)).toEqual("Hello! name")
+//     expect(greeter("hi")).toEqual("Hi! Gluay")
 //   })
 // })
 //
-// const greeter = (name) => {
-//   return `Hello! name`
+// const greeter = (greeting, name) => {
+//   return `Hi! Gluay`
 // }
 
+//******************//
 //9
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 // describe("oddOrEven", (numbers) => {
@@ -165,7 +168,7 @@
 // }
 
 //11
-// // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 // describe("multiply", (num1, num2) => {
 //   it("takes two numbers returns the those two numbers multiplied by the other", () => {
 //     expect(multiply(num1 * num2)).toEqual(num1 * num2)
@@ -175,3 +178,18 @@
 // const multiply = (num1, num2) => {
 //   return num1 * num2
 // }
+
+//12
+// Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+
+
+// const divislbleBy = (num1, num2) => {
+//   if(num1 * num2 === 0) {
+//     return "10 is evenly divisible by 5"
+//   } else {
+//     return "10 isn't evenly divisible by 5"
+//   }
+// }
+
+//13
+// Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
