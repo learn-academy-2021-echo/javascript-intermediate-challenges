@@ -76,3 +76,23 @@ console.log(hazLatte.latteProfile())
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 //
 // Write the code that creates three unique cylinder objects
+// V = PIr^2h
+
+class VolCyl {
+  constructor (radius, height){
+    this.pi = 3.1416
+    this.radius = radius
+    this.height = height
+  }
+
+  myCylinder(){
+    return this.pi * (this.radius ** 2)  * this.height;
+
+  }
+}
+var cylinder1 = new VolCyl (5, 10) // 785.3981
+var cylinder2 = new VolCyl (3, 10) // 282.74
+var cylinder3 = new VolCyl (1, 2) // 6.28
+console.log (cylinder1.myCylinder())
+console.log (cylinder2.myCylinder())
+console.log (cylinder3 .myCylinder())
