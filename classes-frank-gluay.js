@@ -90,3 +90,9 @@ class Cylinder {
 
 let cylinderOne = new Cylinder(5, 2)
 console.log(cylinderOne.volumeCac());
+
+let cylinderTwo = new Cylinder(6, 4)
+console.log(cylinderTwo.volumeCac());
+
+let cylinderThree = new Cylinder(7, 6)
+console.log(cylinderThree.volumeCac());
