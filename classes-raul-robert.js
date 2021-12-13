@@ -70,4 +70,29 @@ console.log(hazelnut.latteProfile());
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 
+class CylinderVol {
+  constructor (radius, height){
+    this.radius = radius
+    this.height = height
+  }
+
+  calcVolume() {
+    return (this.height * (this.radius ** 2) * Math.PI).toFixed(4)
+  }
+
+}
+
+
 // Write the code that creates three unique cylinder objects
+
+var cylinder1 = new CylinderVol (1, 1)
+
+var cylinder2 = new CylinderVol (5, 2)
+
+var cylinder3 = new CylinderVol (3, 7)
+
+console.log(cylinder1.calcVolume())
+
+console.log(cylinder2.calcVolume())
+
+console.log(cylinder3.calcVolume())
