@@ -83,7 +83,7 @@ class CylinderVolume {
     this.pi = Math.PI
   }
   cylinderProfile() {
-    return (2 * this.pi * this.radius * this.height).toFixed(4)
+    return Number((this.pi * this.radius ** 2 * this.height).toFixed(4))
   }
 }
 
