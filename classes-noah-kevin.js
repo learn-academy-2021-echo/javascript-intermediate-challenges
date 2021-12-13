@@ -63,7 +63,7 @@ class Latte {
 
 // Write a method for your Latte class that outputs the latte's profile. X
 
-// Write the code that makes a regular, single shot latte. Then, log the latte's profile. 
+// Write the code that makes a regular, single shot latte. Then, log the latte's profile.
 
 let regularLatte = new Latte("regular", "whole", 1)
 console.log(regularLatte.latteProfile());
@@ -76,4 +76,24 @@ console.log(sarahsLatte.latteProfile());
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 
+class CylinderVolume {
+  constructor(r, h) {
+    this.radius = r
+    this.height = h
+    this.pi = Math.PI
+  }
+  cylinderProfile() {
+    return (2 * this.pi * this.radius * this.height).toFixed(4)
+  }
+}
+
 // Write the code that creates three unique cylinder objects
+
+let cylinderOne = new CylinderVolume(10, 20)
+console.log(cylinderOne.cylinderProfile());
+
+let cylinderTwo = new CylinderVolume(13, 25)
+console.log(cylinderTwo.cylinderProfile());
+
+let cylinderThree = new CylinderVolume(17, 37)
+console.log(cylinderThree.cylinderProfile());
