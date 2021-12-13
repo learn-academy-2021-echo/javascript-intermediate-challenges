@@ -53,3 +53,40 @@ class Coffee {
 
 // let latte = new LatterMaker("latte", "oat", 1)
 // console.log(latte.coffeeProfile());
+
+
+
+//3
+// Volume of a Cylinder
+// Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
+//
+// Write the code that creates three unique cylinder objects
+
+// class Cylinder {
+//   constructor(pi, radius1, radius2, height){
+//     this.pi = 3.14
+//     this.radius1 = radius1
+//     this.radius2 = radius2
+//     this.height = height
+//   }
+//   volumeCac(){
+//     return this.pi * this.radius1 * this.radius2 * this.height
+//   }
+// }
+//
+// let cylinderOne = new Cylinder(3.14, 5, 5, 2)
+// console.log(cylinderOne.volumeCac());
+
+
+class Cylinder {
+  constructor(radius, height){
+    this.radius = radius
+    this.height = height
+  }
+  volumeCac(){
+    return Math.PI * this.radius * this.radius * this.height
+  }
+}
+
+let cylinderOne = new Cylinder(5, 2)
+console.log(cylinderOne.volumeCac());
