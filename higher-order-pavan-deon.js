@@ -35,7 +35,8 @@ const onlyLetters = (array) => {
     return array.filter(value => typeof value === "string")
 }
 
-console.log(onlyLetters(comboArr).join(""))
+console.log(onlyLetters(comboArr).join(""
+))
 
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
