@@ -6,12 +6,29 @@ class Car {
         this.carModel = model
         this.carYear = year
         this.wheels = 4
-        this.carLights = true
+        this.carLights = false
+        this.carSignal = false
+        this.carSpeed = 0
+        this.lights = "off"
     }
     lightSwitch(){
-        return this.carLights === (true) ? this.carLights = false:true
-
+        //return this.carLights === (true) ? this.carLights = false: this.carLights = true
+        if (this.carLights === true){
+            this.lights = "off"
+            this.carLights = false
+        }else {
+            this.lights = "on"
+            this.carLights = true
+        }
     }
+    areTheLightsOn(){
+        return `bro, your lights are ${this.lights}`
+    }
+    carInfo(){
+        return `You have a ${this.carModel} from year ${this.carYear} with ${this.wheels}. The lights are currently ${this.lights}`
+    }
+
+
 }
 
 // Write a variable called myCar which is an instance of the class Car
@@ -33,6 +50,12 @@ class Tesla extends Car{
     constructor(model, year){
         super(model, year)
     }
+    acceleration(){
+        return this.carSpeed += 10
+    }
+    breaking(){
+        return this.carSpeed -= 7
+    }
 }
 
 // Create an object called myTesla which is a instance of class Tesla
@@ -52,6 +75,12 @@ var myTesla = new Tesla("Type X", 2020)
 class Toyota extends Car{
     constructor(model, year){
         super(model, year)
+    }
+    acceleration(){
+        return this.carSpeed += 5
+    }
+    breaking(){
+        return this.carSpeed -= 2
     }
 }
 
@@ -74,6 +103,12 @@ class Volkswagen extends Car{
     constructor(model, year){
         super(model, year)
     }
+    acceleration(){
+        return this.carSpeed += 7
+    }
+    breaking(){
+        return this.carSpeed -= 5
+    }
 }
 var myVolkswagen = new Volkswagen("The Thing", 1960)
 
@@ -84,22 +119,32 @@ var myVolkswagen = new Volkswagen("The Thing", 1960)
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
 // Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
+console.log(myVolkswagen.areTheLightsOn());
 myVolkswagen.lightSwitch()
-console.log(myVolkswagen.carLights);
-myVolkswagen.lightSwitch()
-console.log(myVolkswagen.carLights);
+console.log(myVolkswagen.areTheLightsOn());
 // Story: As a programmer, I can turn the lights in all my cars on and off.
 
 // Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
 
 // Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
-
+console.log(myVolkswagen.carSpeed)
 // Story: As a programmer, I can speed my Tesla up by 10 per acceleration.
 
+myTesla.acceleration()
+// go fast
+myTesla.acceleration()
+//even faster
+myTesla.acceleration()
+// not fast enough
+myTesla.acceleration()
+//check how fast you are going
+console.log(myTesla.carSpeed)
+
 // Story: As a programmer, I can slow my Tesla down by 7 per braking.
-
+myTesla.breaking()
+console.log(myTesla.carSpeed)
 // Story: As a programmer, I can speed my Toyota up by 5 per acceleration.
-
+myToyota.acceleration()
 // Story: As a programmer, I can slow my Toyota down by 2 per braking.
 
 // Story: As a programmer, I can speed my Volkswagen up by 7 per acceleration.
@@ -109,3 +154,6 @@ console.log(myVolkswagen.carLights);
 // Story: As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
 
 // The method can be created in the parent class and accessed by all child classes
+console.log(myTesla.carInfo())
+console.log(myToyota.carInfo())
+console.log(myVolkswagen.carInfo())
