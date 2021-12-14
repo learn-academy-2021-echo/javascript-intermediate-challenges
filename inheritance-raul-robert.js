@@ -146,11 +146,11 @@ console.log(myTesla.carSpeed)
 // Story: As a programmer, I can speed my Toyota up by 5 per acceleration.
 myToyota.acceleration()
 // Story: As a programmer, I can slow my Toyota down by 2 per braking.
-
+myToyota.breaking()
 // Story: As a programmer, I can speed my Volkswagen up by 7 per acceleration.
-
+myVolkswagen.acceleration()
 // Story: As a programmer, I can slow my Volkswagen down by 5 per braking.
-
+myVolkswagen.breaking()
 // Story: As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
 
 // The method can be created in the parent class and accessed by all child classes
