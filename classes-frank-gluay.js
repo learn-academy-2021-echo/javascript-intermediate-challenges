@@ -48,8 +48,26 @@ class Coffee {
 //     return `A ${this.flavor} coffee with ${this.milk} milk, and ${this.numberOfShots} shot`
 //   }
 // }
-
-//Write the code that makes a regular, single shot latte. Then, log the latte's profile.
-
+//
+// //Write the code that makes a regular, single shot latte. Then, log the latte's profile.
+//
 // let latte = new LatterMaker("latte", "oat", 1)
 // console.log(latte.coffeeProfile());
+
+
+// Volume of a Cylinder
+// Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
+//
+// Write the code that creates three unique cylinder objects
+
+// class Cylinder {
+//   constructor(radius, height){
+//     this.radius = radius
+//     this.height = height
+//   }
+//   volumeCac(){
+//     return Math.PI * this.radius * this.radius * this.height
+//   }
+// }
+// let cylinderOne = new Cylinder(5, 2)
+// console.log(cylinderOne.volumeCac());
