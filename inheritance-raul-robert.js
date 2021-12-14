@@ -6,6 +6,11 @@ class Car {
         this.carModel = model
         this.carYear = year
         this.wheels = 4
+        this.carLights = true
+    }
+    lightSwitch(){
+        return this.carLights === (true) ? this.carLights = false:true
+
     }
 }
 
@@ -36,8 +41,8 @@ var myTesla = new Tesla("Type X", 2020)
 
 // Story: As a programmer, I can give my Tesla a model on initialization.
 
-console.log(myTesla.carModel)
-console.log(myTesla.carYear)
+// console.log(myTesla.carModel)
+// console.log(myTesla.carYear)
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Tesla a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
@@ -59,18 +64,30 @@ var myToyota = new Toyota("corolla", 2013)
 // Story: As a programmer, I can give my Toyota a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
-console.log(myToyota);
-console.log(myToyota.carModel)
-console.log(myToyota.carYear)
+// console.log(myToyota);
+// console.log(myToyota.carModel)
+// console.log(myToyota.carYear)
 // Story: As a programmer, I can make a Volkswagen car.
 // class Volkswagen inherits from class Car
 // create an object called myVolkswagen which is a instance of class Volkswagen
+class Volkswagen extends Car{
+    constructor(model, year){
+        super(model, year)
+    }
+}
+var myVolkswagen = new Volkswagen("The Thing", 1960)
+
+
 // Story: As a programmer, I can give my Volkswagen a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Volkswagen a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
-// Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 
+// Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
+myVolkswagen.lightSwitch()
+console.log(myVolkswagen.carLights);
+myVolkswagen.lightSwitch()
+console.log(myVolkswagen.carLights);
 // Story: As a programmer, I can turn the lights in all my cars on and off.
 
 // Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
