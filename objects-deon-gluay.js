@@ -38,27 +38,27 @@
 
 
 //4
-// var animals = [
-//   { name: "Waffles", type: "dog", age: 12 },
-//   { name: "Fluffy", type: "cat", age: 14 },
-//   { name: "Spelunky", type: "dog", age: 4 },
-//   { name: "Hank", type: "cat", age: 11 },
-//   // catPets: function(){
-//   //   return
-//   // }
-// ]
+var animals = [
+  { name: "Waffles", type: "dog", age: 12 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 },
+
+]
 
 // var cats = animals.filter(value => value.type === "cat")
 // console.log(cats);
+
+//not this one below
 // var petNames = animals.filter(value => value.name)
 // console.log(petNames);
 
-// const petNames = (array) => {
-//   return array.map(value => {
-//     return value.name
-//   })
-// }
-// console.log(petNames(animals));
+const petNames = (array) => {
+  return array.map(value => {
+    return value.name
+  })
+}
+console.log(petNames(animals));
 
 
 //5
@@ -70,25 +70,25 @@
 // var {name, genre} = author
 // console.log(`${name} is a ${genre} author`);
 
-let pokeOne = {
-    species: "Charmandar",
-    pokemon_type: "Fire",
-    describePokemon: function(){
-      return `${pokeOne.species} is a ${pokeOne.pokemon_type} pokemon.`
-    }
-}
-
-var {species, pokemon_type, describePokemon} = pokeOne
-console.log(describePokemon(pokeOne))
-
-
-
-let pokeTwo = {
-    species: "Magikarp",
-    pokemon_type: "Water",
-    describePokemon: function(){
-      return `${pokeTwo.species} is a ${pokeTwo.pokemon_type} pokemon.`
-    }
-}
-var {species, pokemon_type, describePokemon} = pokeTwo
-console.log(describePokemon(pokeTwo))
+// let pokeOne = {
+//     species: "Charmandar",
+//     pokemon_type: "Fire",
+//     describePokemon: function(){
+//       return `${pokeOne.species} is a ${pokeOne.pokemon_type} pokemon.`
+//     }
+// }
+//
+// var {species, pokemon_type, describePokemon} = pokeOne
+// console.log(describePokemon(pokeOne))
+//
+//
+//
+// let pokeTwo = {
+//     species: "Magikarp",
+//     pokemon_type: "Water",
+//     describePokemon: function(){
+//       return `${pokeTwo.species} is a ${pokeTwo.pokemon_type} pokemon.`
+//     }
+// }
+// var {species, pokemon_type, describePokemon} = pokeTwo
+// console.log(describePokemon(pokeTwo))
