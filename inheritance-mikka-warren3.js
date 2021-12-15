@@ -1,111 +1,127 @@
 // Story: As a programmer, I can make a car.
 // Write a variable called myCar which is an instance of the class Car
-
-class Car {
-  constructor(model,year,wheels,lights,signals){
-    this.model = model
-    this.year = year
-    this.wheels = wheels
-    this.lights = lights
-    this.signals = signals
-  }
-      lightsOn() {
-        this.lights = "on"
-        return `The lights on our ${this.year} ${this.model} are ${this.lights}.`
-        }
-        lightsOff() {
-          this.lights = "off"
-          return `The lights on our ${this.year} ${this.model} are ${this.lights}.`
-        }
-        signalsOn(){
-          this.signals = "on"
-        return  `The signals on our ${this.year} ${this.model} are ${this.signals}.`
-        }
-        signalsOff(){
-          this.signals = "off"
-          `The signals on our ${this.year} ${this.model} are ${this.signals}.`
-        }
-}
-
-
- var myCar = new Car("generic","1999",4,"off")
-console.log(myCar)
-console.log(myCar.signalsOn())
 // console.log(myCar.wheels)
 // Story: As a programmer, I can give my car a model on initialization.
 // The model for the car class can be "generic car"
- // Story: As a programmer, I can give my car a year on initialization.
+// Story: As a programmer, I can give my car a year on initialization.
 // The year for the car class can be "myCar year"
 // Story: As a programmer, I can tell how many wheels myCar has.
 // Calling the method wheels will return 4
 
-// Story: As a programmer, I can make a Tesla car.
-
-// class Tesla inherits from class Car
-
-class Tesla extends Car{
-  constructor(model,year,wheels){
-    super(model,year,wheels)
-
+class Car {
+  constructor(model,year, accel, brake){
+    this.model = model
+    this.year = year
+    this.wheels = 4
+    this.lights = "OFF"
+    this.signals = "OFF"
+    this.speed = 0
+    this.accelRate = accel
+    this.brake = brake
   }
-
-
+        lightsOn() {
+        this.lights = "ON"
+        }
+        lightsOff() {
+          this.lights = "OFF"
+        }
+        signalsOn(){
+          this.signals = "ON"
+        }
+        signalsOff(){
+          this.signals = "OFF"
+        }
+        speedUp(){
+          this.speed = this.speed + this.accelRate
+        }
+        slowDown(){
+          this.speed = this.speed - this.brake
+        }
+        carInfo(){
+          return `This cars is a ${this.year} ${this.model} with ${this.wheels} wheels going at ${this.speed} MPH. The lights are ${this.lights} and the signals are ${this.signals}`
+        }
 }
 
-// Create an object called myTesla which is a instance of class Tesla
 
+var myCar = new Car("Generic","1999", 5, 2)
+// myCar.speedUp()
+// console.log (myCar.carInfo())
+// myCar.slowDown()
+console.log (myCar.carInfo())
+
+// Story: As a programmer, I can make a Tesla car.
+// class Tesla inherits from class Car
+// Create an object called myTesla which is a instance of class Tesla
 // Story: As a programmer, I can give my Tesla a model on initialization.
 // The model can be inherited from the parent class Car by passing the model
 //through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Tesla a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
-var myTesla = new Car("X", 2020, 4)
-//console.log(myTesla)
-// console.log(myTesla.wheels)
+
+class Tesla extends Car{
+  constructor(model,year, accel, brake){
+    super(model,year, accel, brake)
+  }
+}
+
+var myTesla = new Car("X", 2020, 10, 7)
+myTesla.speedUp()
+// console.log (myTesla.carInfo())
+myTesla.slowDown()
+myTesla.lightsOn()
+console.log (myTesla.carInfo())
 
 
 // Story: As a programmer, I can make a Toyota car.
 // class Toyota inherits from class Car
-
-class Toyota extends Car{
-  constructor(model,year,wheels){
-    super(model,year,wheels)
-  }
-}
-
 // create an object called myToyota which is a instance of class Toyota
-
 // Story: As a programmer, I can give my Toyota a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Toyota a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
-var myToyota = new Car("Corolla", 2017, 4)
-console.log(myToyota.lightsOn())
+
+class Toyota extends Car{
+  constructor(model,year){
+    super(model,year)
+  }
+}
+
+var myToyota = new Car("Corolla", 2017, 5, 2)
+myToyota.speedUp()
+// console.log (myToyota.carInfo())
+myToyota.slowDown()
+console.log (myToyota.carInfo())
 
 // Story: As a programmer, I can make a Volkswagen car.
 // class Volkswagen inherits from class Car
-class Volkswagen extends Car {
-  constructor(model,year,wheels){
-    super(model,year,wheels)
-
-  }
-}
 // create an object called myVolkswagen which is a instance of class Volkswagen
 // Story: As a programmer, I can give my Volkswagen a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Volkswagen a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
-var myVW = new Car("Rabbit", 1982, 4)
-// Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
+class Volkswagen extends Car {
+  constructor(model,year){
+    super(model,year)
+
+  }
+}
+
+var myVW = new Car("Rabbit", 1982, 7, 5)
+myVW.speedUp()
+// console.log (myVW.carInfo())
+myVW.slowDown()
+console.log (myVW.carInfo())
+
+// Story: As a programmer, I can give all my cars a lights property. Lights start in the off position. DONE
 //
-// Story: As a programmer, I can turn the lights in all my cars on and off.
+// Story: As a programmer, I can turn the lights in all my cars on and off. DONE
 //
-// Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
+// Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position. DONE
 //
-// Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
+// Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph. DONE
 //
-// Story: As a programmer, I can speed my Tesla up by 10 per acceleration.
+// Story: As a programmer, I can speed my Tesla up by 10 per acceleration. DONE
 //
 // Story: As a programmer, I can slow my Tesla down by 7 per braking.
 //
