@@ -1,112 +1,57 @@
 // Challenges
 // Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 // Don't forget to pseudo code.
-
 // Write a function that takes in an array of numbers and returns an array with all numbers multiplied by 3.
 var testArr1 = [3, 9, 15, 4, 10]
-
-const multipleThree = (array) => {
-
-    let newNum = []
-    for (let i = 0; i < array.length; i++) {
-        newNum.push(array[i] * 3)
-    }
-
-    return newNum
-}
-
-console.log(multipleThree(testArr1));
 // // --> [9, 27, 45, 12, 30]
-
+const multiplyFunc = (array) =>{
+    let newArr = []
+    //for loop
+    for (var i = 0; i < testArr1.length; i++) {
+        newArr.push(array[i] * 3);
+    }
+    return newArr
+}
+console.log(multiplyFunc(testArr1));
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
-
-const oddNumbers = (array) => {
-
-    let oddNum = []
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 !== 0) {
-            oddNum.push(array[i])
-        }
-
-    }
-
-    return oddNum
-}
-
-console.log(oddNumbers(testArr2));
-
 // // --> [-7, 3, 5, 13]
+const odd = (array) =>{
+    let newArr = []
+    //for loop
+    for (var i = 0; i < testArr2.length; i++) {
+        if (array[i] % 2 !== 0) {
+            newArr.push(array[i]);
+        }
+    }
+    return newArr
+}
+console.log(odd(testArr2));
+
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
 var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
-
-
-const stringArray = (array) => {
-
-    let newArray = []
-    for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] === "string") {
-            newArray.push(array[i])
-        }
-
-    }
-
-    return newArray.join("")
-}
-
-console.log(stringArray(comboArr));
-
-
 // // --> "nicework"
-
-
-
+const typeFun = (array) => {
+  let newArr = []
+  for (var i = 0; i < array.length; i++){
+    if (typeof array[i] === "string"){
+      newArr.push(array[i])
+    }
+  }
+  return newArr.join("")
+}
+console.log(typeFun(comboArr));
 // Create a function that takes in an array of numbers and returns the sum.
-var addThese1 = [1, 2, 3, 4]
+// var addThese1 = [1, 2, 3, 4]
 // // --> 10
-var addThese2 = []
+//
+// var addThese2 = []
 // // --> 0
-const sumNum = (array) => {
-
-    let sum = 0
-    for (let i = 0; i < array.length; i++) {
-        sum = array[i] + sum
-
-    }
-
-    return sum
-}
-
-console.log(sumNum(addThese1));
-console.log(sumNum(addThese2));
-
-
-
-
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-var indexHighestNumber = [1, 4, 2, 3]
+// var indexHighestNumber = [1, 4, 2, 3]
 // // --> 1
-const largeNum = (array) => {
-
-    let largeNum = array[0]
-    for (let i = 1; i < array.length; i++) {
-        if (largeNum < array[i]) {
-            largeNum = array[i]
-        }
-
-    }
-
-    return array.indexOf(largeNum)
-}
-
-console.log(largeNum(indexHighestNumber));
-
-
-
-
-
 // STRETCH Challenges
-
+//
 // Create a function that takes in two arrays and returns one array with no duplicate values.
 // var arr1 = [3, 7, 10, 5, 4, 3, 3]
 // var arr2 = [7, 8, 2, 3, 1, 5, 4]
@@ -115,7 +60,7 @@ console.log(largeNum(indexHighestNumber));
 // var arrayLength = 6
 // var arrayValue = 0
 // // --> [0, 0, 0, 0, 0, 0]
-
+//
 // var arrayLength = 4
 // var arrayValue = 11
 // // --> [11, 11, 11, 11]
@@ -123,15 +68,15 @@ console.log(largeNum(indexHighestNumber));
 // var addUp1 = 4
 // // 1 + 2 + 3 + 4 = 10
 // // --> 10
-
+//
 // var addUp2 = 10
 // // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
 // // --> 55
-
+//
 // var addUp3 = 600
 // // --> 180300
 // EPIC Challenges
-
+//
 // Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
 // Create an HTML page and link your JavaScript file. More info here .
 // As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive).
